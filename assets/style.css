@@ -58,7 +58,7 @@ strong {
 
 button {
 	font-size: 1.25em;
-	background-color: tomato;
+	background-color: orange;
 	color: white;
 	cursor: pointer;
 	margin-top: 3em;
@@ -66,7 +66,7 @@ button {
 }
 
 button:active {
-	background-color: firebrick;
+	background-color: tomato;
 }
 
 
