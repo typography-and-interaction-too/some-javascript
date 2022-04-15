@@ -6,21 +6,24 @@ console.log("Hello, world")
 
 // This waits until the browser parses the page.
 window.addEventListener('DOMContentLoaded', () => {
+	// Set up some variables. These wont’t change, so they are *constants*.
 	const lightBoxButton = document.querySelector('button') // These use normal CSS selectors.
 	const lightBox = document.querySelector('.lightbox')
+	// console.log(lightBoxButton)
 
 	// Watch for clicks on the element.
-	lightBoxButton.onclick = () => {
+	lightBoxButton.addEventListener('click', () => {
 		lightBox.classList.remove('hidden')
+	})
 
-		lightBox.onclick = () => {
-			lightBox.classList.add('hidden')
-		}
+	// Shorthand for the `click` event.
+	lightBox.onclick = () => {
+		lightBox.classList.add('hidden')
 	}
 
 
 
-	// Note the `All` here.
+	// Note the `All` here, getting multiple items.
 	const images = document.querySelectorAll('.grid > img')
 	const visibleClass = 'visible'
 	// console.log(images)
@@ -29,6 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	images.forEach((image) => {
 		const imageObserver = new IntersectionObserver(entries => {
 			const [entry] = entries
+			// This is a "ternary" operator—a condensed if/else.
 			entry.isIntersecting ? image.classList.add(visibleClass) : image.classList.remove(visibleClass)
 		}, {
 			rootMargin: '-10% 0% -10% 0%', // This is CSS-like: top/right/bottom/left.
