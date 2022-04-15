@@ -23,6 +23,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+	// toggleClassOnClick(lightBoxButton, lightBox, 'hidden')
+	// toggleClassOnClick(lightBox, lightBox, 'hidden')
+
+
+
 	// Note the `All` here, getting multiple items.
 	const images = document.querySelectorAll('.grid > img')
 	const visibleClass = 'visible'
@@ -42,3 +47,19 @@ window.addEventListener('DOMContentLoaded', () => {
 	})
 });
 
+
+
+// Use functions for repeated behaviors. Don’t Repeat Yourself!
+const toggleClassOnClick = (clickElement, classElement, className) => {
+	clickElement.onclick = () => {
+		// This is an if/else statement!
+		if (classElement.classList.contains(className)) {
+			classElement.classList.remove(className)
+		} else {
+			classElement.classList.add(className)
+		}
+
+		// Or…
+		// classElement.classList.toggle(className)
+	}
+}
