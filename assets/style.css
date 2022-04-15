@@ -53,3 +53,33 @@ em {
 strong {
 	font-weight: bold;
 }
+
+
+
+button {
+	background-color: tomato;
+	border-radius: 0.25em;
+	color: white;
+	cursor: pointer;
+	margin-top: 3em;
+	padding: 0.75em 1em;
+	transition-duration: 50ms;
+}
+
+button:active {
+	background-color: firebrick;
+}
+
+.lightbox {
+	background: rgba(0, 0, 0, 0.85);
+	bottom: 0;
+	color: white;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.hidden {
+	display: none;
+}
