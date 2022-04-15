@@ -24,7 +24,7 @@ h1 {
 }
 
 section {
-	margin-top: 5em;
+	margin-top: 33vh;
 }
 
 p {
@@ -95,4 +95,72 @@ button:active {
 	max-height: 100%;
 	max-width: 100%;
 	object-fit: contain;
+}
+
+
+
+.grid {
+	margin-top: 4em;
+	display: grid;
+	row-gap: 6em;
+	column-gap: 2em;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 600px) {
+	.grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (min-width: 1400) {
+	.grid {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+
+
+.grid img {
+	opacity: 0;
+	transition-duration: 200ms;
+	transition-delay: 100ms;
+	visibility: hidden;
+}
+
+.grid img.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+.grid img:nth-child(1) {
+	margin-top: 8em;
+}
+
+.grid img:nth-child(2) {
+	margin-top: 5em;
+}
+
+.grid img:nth-child(4) {
+	margin-top: 20em;
+}
+
+.grid img:nth-child(5) {
+	margin-top: 3em;
+}
+
+.grid img:nth-child(7) {
+	margin-top: 12em;
+}
+
+.grid img:nth-child(8) {
+	margin-top: 5em;
+}
+
+.grid img:nth-child(9) {
+	margin-top: 2em;
+}
+
+.grid img:nth-child(10) {
+	margin-top: 18em;
 }
