@@ -1,4 +1,55 @@
-/* This is where your CSS lives. */
+/* This is from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+
+body {
+	font-family: 'IBM Plex Sans', sans-serif; /* From Google Fonts. */
+	overflow-x: hidden; /* Prevent horizontal scroll when you position things “off screen”. */
+	padding: 4em 2em 50vh; /* Nice room at the end of the page. */
+	font-size: 14px;
+}
+
+@media (min-width: 600px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+section {
+	margin-top: 5em;
+}
+
 p {
-	color: tomato;
+	max-width: 65ch; /* Control line length for readability. */
+}
+
+p:not(:first-of-type) {
+	margin-top: 1em;
+}
+
+/* To differentiate code examples. */
+code {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 0.2em;
+	display: inline-block;
+	font-family: 'IBM Plex Mono', monospace; /* Google Fonts. */
+	padding: 0.2em 0.4em;
+	font-size: 0.9em;
+	white-space: pre; /* Prevents line breaks. */
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
 }
