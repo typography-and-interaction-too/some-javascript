@@ -6,6 +6,15 @@ console.log("Hello, world")
 
 // This waits until the browser parses the page.
 window.addEventListener('DOMContentLoaded', () => {
-	console.log("This runs later.")
+	const lightBoxButton = document.querySelector('button') // These use normal CSS selectors.
+	const lightBox = document.querySelector('.lightbox')
+
+	lightBoxButton.onclick = () => {
+		lightBox.classList.remove('hidden')
+
+		lightBox.onclick = () => {
+			lightBox.classList.add('hidden')
+		}
+	}
 });
 

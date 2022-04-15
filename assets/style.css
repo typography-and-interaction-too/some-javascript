@@ -70,16 +70,29 @@ button:active {
 	background-color: firebrick;
 }
 
+
+
+.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
 .lightbox {
+	align-items: center;
 	background: rgba(0, 0, 0, 0.85);
 	bottom: 0;
 	color: white;
+	display: flex;
 	left: 0;
+	padding: 2em;
 	position: fixed;
 	right: 0;
 	top: 0;
+	transition-duration: 200ms;
 }
 
-.hidden {
-	display: none;
+.lightbox img {
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain;
 }
