@@ -24,7 +24,7 @@ h1 {
 }
 
 section {
-	margin-top: 33vh;
+	margin-top: 25vh;
 }
 
 p {
@@ -57,12 +57,11 @@ strong {
 
 
 button {
+	font-size: 1.25em;
 	background-color: tomato;
-	border-radius: 0.25em;
 	color: white;
 	cursor: pointer;
 	margin-top: 3em;
-	padding: 0.75em 1em;
 	transition-duration: 50ms;
 }
 
@@ -163,4 +162,21 @@ button:active {
 
 .grid img:nth-child(10) {
 	margin-top: 18em;
+}
+
+
+.rounded-container {
+	border-radius: 0.33em;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+	padding: 0.5em 0.75em;
+}
+
+#source-link {
+	background-color: dodgerblue;
+	color: white;
+	font-family: 'IBM Plex Mono', monospace;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	z-index: 1;
 }
